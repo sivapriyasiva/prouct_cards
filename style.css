@@ -51,7 +51,7 @@ input {
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 35px 25px; /* row and colunm gap b/w carts */
-  overflow-y: auto;
+  
 }
 
 .table-container {
@@ -132,7 +132,7 @@ div.table > div:first-child {
   align-items: center;
   justify-content: center;
   color: var(--blue-color);
-  cursor: pointer;
+ 
 }
 .add_cart:hover {
   background-color: var(--blue-color);
@@ -155,7 +155,6 @@ div.table > div:first-child {
 }
 .div {
   height: 1fr;
-  overflow-y: auto;
   display: flex;
   /* box-shadow: 0 5px 10px 0px #f1f1f1; */
 }
@@ -190,6 +189,10 @@ div.table > div:first-child {
   font-weight: bold;
   font-size: 16px;
 }
-.delete-icon {
+/* .delete-icon,.add_cart { */
+  .curpoint,.add_cart{
   cursor: pointer;
+}
+.curdef,.card .product-name{
+  cursor: default;
 }
