@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Product Cards</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h4 class="padding">Logo</h4>
+      </header>
+      <div class="main">
+        <div class="item1">
+          <div class="header padding">
+            <h3>Products</h3>
+            <input type="text" id="searchBox" placeholder="Search" />
+          </div>
+          <div id="products" class="padding">
+            <!-- Insert the card using insertAdjacentHTML() -->
+          </div>
+        </div>
+        <div class="item2">
+          <div class="header padding">
+            <h3>My Cart</h3>
+          </div>
+          <div class="div">
+            <div class="table-container padding">
+              <div class="left table">
+                <div>Product List</div>
+                <div class="product-list">
+                  <!-- Product name will be displayed here -->
+                </div>
+                <div>Total</div>
+              </div>
+              <div class="right table">
+                <div>Cost</div>
+                <div class="product-list1">
+                  <!-- Product price will be displayed here -->
+                </div>
+                <div class="total"></div>
+              </div>
+            </div>
+
+            <!--designation box-->
+            <div class="stock-info padding">
+              <h3>Stock Information</h3>
+              <div id="stock"></div>
+            </div>
+          </div>
+          <!--div-->
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
