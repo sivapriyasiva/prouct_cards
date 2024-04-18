@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { name: "Fridge", price: 50000, stock: 5 },
     { name: "Coffee Tables", price: 4000, stock: 10 },
     { name: "TV", price: 8000, stock: 6 },
+
   ];
 
   function generateProductCard(product) {
