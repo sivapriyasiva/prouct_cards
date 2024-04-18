@@ -3,6 +3,7 @@
   padding: 0px;
   font-family: sans-serif;
   overflow: hidden;
+
 }
 .container {
   height: 100vh;
@@ -25,7 +26,7 @@ h4 {
 .item2 {
   height: 100%;
   width: 50%;
-  overflow-y: auto;
+ 
 }
 .item1 {
   border-right: 1px solid var(--search-box-color);
@@ -48,14 +49,11 @@ input {
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 35px 25px; /* row and column gap b/w carts */
+  max-height: 90%;
   overflow-y: auto;
+  
 }
 
-.table-container {
-  display: flex;
-  height: auto;
-  width: 94%;
-}
 .padding {
   padding: 15px 20px;
 }
@@ -137,31 +135,36 @@ input {
   padding: 10px;
 }
 
+ 
 ::-webkit-scrollbar {
   width: 7px;
   background-color: white;
+  
 }
 
 ::-webkit-scrollbar-thumb {
-  visibility: hidden;
-  background: #edecec;
   border-radius: 50px;
+  visibility: hidden; /* Hide scrollbar by default */
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #c9c9c9;
+
+/* Show scrollbar on hover over #products,.table-container */
+.item1:hover #products::-webkit-scrollbar-thumb,
+.table-container:hover .body::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  visibility: visible; 
 }
-.item1:hover::-webkit-scrollbar-thumb,
-.item2:hover::-webkit-scrollbar-thumb {
-  visibility: visible;
-}
+
+
+/* table styles */
 
 .table-container {
   border: 1px solid var(--border-color);
   display: grid;
   grid-template-rows: 1fr auto 1fr;
-  height: auto;
   width: 94%;
   margin-left: 20px;
+  max-height: 80%;
+  
 }
 .head,
 .foot,
@@ -176,15 +179,7 @@ input {
   height: 100%;
   width: 50%;
 }
-.head {
-  border-bottom: 1px solid var(--border-color);
-  background-color: #f1f1f1;
-  font-size: 14px;
-  font-weight: bold;
-}
-.foot {
-  font-weight: bold;
-}
+
 .head div:first-child,
 .foot div:first-child,
 .row div:first-child {
@@ -200,3 +195,18 @@ input {
 .row:hover .delete-icon {
   display: flex;
 }
+
+.head,
+.foot {
+  background-color: #f1f1f1;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px; 
+  font-weight: bold;
+  height: 2rem;
+}
+
+.body {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
